@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div >
+    <p id="p" style="color:#ff0000;">hahah</p>
+</div>
+<div>
+    <ul>
+        <li><a style="color:green" href="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1126541908,2603454962&fm=116&gp=0.jpg" onclick="showpicture(this);return false;">pic1</a></li>
+        <img id="placeholder" src="" alt="pic1">
+        <li><a href="http://www.shentr.com/judgeonline2016/common/Image/hdp/8.jpg">pic2</a></li>
+        <li><a href="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1126541908,2603454962&fm=116&gp=0.jpg">pic3</a></li>
+    </ul>
+</div>
+<script>
+    function showpicture(which){
+        var p=document.getElementById("p").getAttribute("style");
+        which.setAttribute("style",p);
+        var src=which.getAttribute("href");
+        //alert(src);
+        var placeholder=document.getElementById("placeholder");
+        placeholder.setAttribute("src",src);
+    }
+
+    function count(){
+        var bdcnt=document.getElementsByTagName("body");
+        var node=bdcnt[0].childNodes;
+        node.forEach(function(){
+            console.log(node.nodeType)}
+        );
+
+    }
+
+    window.onload=count;
+</script>
+</body>
+</html>
