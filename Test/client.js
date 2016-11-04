@@ -9,7 +9,7 @@ var option={
 }
 var reqCb=function (res) {
     var data='';
-    res.on('data',function (fdata) {
+    res.on('data',function (fdata) { 
         data+=fdata;
     });
     res.on('end',function () {
